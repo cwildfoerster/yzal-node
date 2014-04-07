@@ -1,7 +1,7 @@
 yzal-node
 =========
 
-[![yzal-node on a mobile device](https://github.com/cwildfoerster/yzal-node/raw/master/screenshot.png)]
+![yzal-node on a mobile device](https://github.com/cwildfoerster/yzal-node/raw/master/screenshot.png)
 
 ### How to run
 * cp config.sample.json config.json
