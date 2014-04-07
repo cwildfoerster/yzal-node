@@ -14,3 +14,4 @@ yzal-node
 * Add a question before master off
 * Support i18n / l10n
 * Maybe add some kind of administration interface, so we do not need to modify the config.json
+* What else?
