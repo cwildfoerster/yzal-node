@@ -18,6 +18,13 @@ var mimeTypes = {
   'eot'  : 'application/vnd.ms-fontobject'
 };
 
+// sort config..
+for (var i = 0; i < config.groups.length; i++) {
+  config.groups[i].items.sort(function(a, b) { 
+    return a.name.toLowerCase().localeCompare(b.name.toLowerCase());
+  });
+}
+
 app.listen(config.port);
 
 // super simple server, maybe use connect or something like that?
