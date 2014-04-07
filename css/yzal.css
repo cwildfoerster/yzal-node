@@ -1,0 +1,116 @@
+/** a little bit of bootstrap theming... */
+body{background:#dbe0eb;color:#687189}h1,h2,h3,h4,h5,h6{color:#687189;text-shadow:0 1px #fff;font-weight:500}.btn{border-radius:2px;box-shadow:0 1px 2px rgba(0,0,0,0.2),inset 0 1px rgba(255,255,255,0.3);outline:none !important;font-weight:700}.btn-default{background:linear-gradient(to bottom,#f2f4fa 0,#e8edf7 100%);border-color:#9fb7c7;color:#687189}.btn-default:hover{border-color:#85a3b8;color:#7787ab}.btn-default:active,.btn-default.active{background:linear-gradient(to bottom,#e7ebf6 0,#e8edf7 100%);border-color:#7e9fb5;color:#7787ab}.btn-primary{background:linear-gradient(to bottom,#629fd3 0,#428bca 100%);border-color:#3071a9}.btn-primary:hover{border-color:#275c8a}.btn-primary:active,.btn-primary.active{background:linear-gradient(to bottom,#3784c5 0,#428bca 100%);border-color:#245682}.btn-success{background:linear-gradient(to bottom,#78c478 0,#5cb85c 100%);border-color:#449d44}.btn-success:hover{border-color:#388038}.btn-success:active,.btn-success.active{background:linear-gradient(to bottom,#51b351 0,#5cb85c 100%);border-color:#357935}.btn-info{background:linear-gradient(to bottom,#7dcde5 0,#5bc0de 100%);border-color:#31b0d5}.btn-info:hover{border-color:#2596b8}.btn-info:active,.btn-info.active{background:linear-gradient(to bottom,#4ebbdb 0,#5bc0de 100%);border-color:#2390b0}.btn-warning{background:linear-gradient(to bottom,#f3be74 0,#f0ad4e 100%);border-color:#ec971f}.btn-warning:hover{border-color:#d18212}.btn-warning:active,.btn-warning.active{background:linear-gradient(to bottom,#efa640 0,#f0ad4e 100%);border-color:#c77c11}.btn-danger{background:linear-gradient(to bottom,#e07471 0,#d9534f 100%);border-color:#c9302c}.btn-danger:hover{border-color:#a82824}.btn-danger:active,.btn-danger.active{background:linear-gradient(to bottom,#d64742 0,#d9534f 100%);border-color:#a02622}
+
+/** disable user select so it feels more like a real app on mobile devices */
+* {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+body {
+	padding-top: 0;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+
+.col-md-4 {
+	font-size: 0;
+}
+
+h2,h3 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+}
+
+h2 {
+	margin: 10px 0 !important;
+	text-align: center;
+}
+
+.modal-footer {
+	margin-top: 0;
+}
+
+form {
+	margin-bottom: 0;
+}
+
+.form-group:last-child {
+	margin-bottom: 0;
+}
+
+.btn-container {
+	width: 50%;
+	padding: 2px;
+	display: inline-block;
+}
+
+.switch {
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+	display: block;
+}
+
+.switch span {
+	display: none;
+	position: absolute;
+	right: 3px;
+	top: 3px;
+}
+
+.switch.has-timer span {
+	display: block;
+}
+
+.switch i {
+	font-size: 3em;
+}
+
+.switch strong {
+	display: block;
+	margin: 0 -100px;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+#master-off {
+	display: inline-block;
+	margin: 20px auto;
+	font-size: .9em;
+}
+
+#master-off i {
+	font-size: 2.4em;
+}
+
+#master-off strong {
+	margin: auto;
+}
+
+.btn-default {
+	text-shadow: 0 1px #fff;
+}
+
+.btn-primary,
+.btn-success,
+.btn-info,
+.btn-warning,
+.btn-danger {
+	text-shadow: 0 1px rgba(0,0,0,.3);
+}
+
+@media (max-width : 768px) {
+	.btn-container {
+		width: 33.3333333%;
+	}
+}
+
+@media (min-width :768px) and (max-width:991px) {
+	.btn-container {
+		width: 25%;
+	}
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Yzal",
+  "preferGlobal": false,
+  "version": "0.1.0",
+  "author": "Constantin Wildförster <constantin@wildfoerster.org>",
+  "description": "A simple web socket enabled web interface to control your home using the raspberry pi and 433 mhz controllers.",
+  "private": true,
+  "bin": {
+    "http-server": "server.js"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "main": ".",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cwildfoerster/yzal.git"
+  },
+  "keywords": [
+    "gui",
+    "remote",
+    "websocket"
+  ],
+  "dependencies" : {
+    "socket.io": "~0.9.6",
+    "execSync": "~1.0.0"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": "~0.10.1"
+  }
+}

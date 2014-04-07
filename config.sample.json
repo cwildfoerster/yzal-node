@@ -1,0 +1,40 @@
+{
+  "command": "./send",
+  "port": 8080,
+  "groups": [
+    {
+      "name": "Lights",
+      "items": [
+        {
+          "name": "Bright-Light",
+          "system": "11111",
+          "remote": 1,
+          "state": 0
+        },
+        {
+          "name": "Moodlight",
+          "system": "11111",
+          "remote": 2,
+          "state": 0
+        }
+      ]
+    },
+    {
+      "name": "Multimedia",
+      "items": [
+        {
+          "name": "Awesome Big TV",
+          "system": "11110",
+          "remote": 1,
+          "state": 0
+        },
+        {
+          "name": "Steambox",
+          "system": "11110",
+          "remote": 2,
+          "state": 0
+        }
+      ]
+    }
+  ]
+}
