@@ -1,5 +1,7 @@
-yzal-node
+Yzal
 =========
+
+Yzal is a simple, yet fast and good looking web application designed to control cheap 433 MHz remote power outlets using the awesome Raspberry Pi. This project is build upon node.js and socket.io.
 
 ![yzal-node on a mobile device](https://github.com/cwildfoerster/yzal-node/raw/master/screenshot.png)
 
@@ -15,4 +17,5 @@ yzal-node
 * Support i18n / l10n
 * Maybe add some kind of administration interface, so we do not need to modify the config.json
 * Proper build tools
+* Provide a "howto" how to make your Raspberry Pi capable of controlling cheap remote power outlets.
 * What else?
