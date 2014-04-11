@@ -13,7 +13,6 @@ Yzal is a simple, yet fast and good looking web application designed to control 
 
 ### TODO
 * Documentation for what this project is, how to build and how to run.
-* Add a question before master off
 * Support i18n / l10n
 * Maybe add some kind of administration interface, so we do not need to modify the `config.json`
 * Proper build tools
