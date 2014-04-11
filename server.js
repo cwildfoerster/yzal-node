@@ -116,8 +116,7 @@ if (!String.prototype.format) {
 
 // does the low level switching
 function switchInternal(item, state) {
-  //sh.run(config.command.format(item.system, item.remote, state));
-  console.log(config.command.format(item.system, item.remote, state));
+  sh.run(config.command.format(item.system, item.remote, state));
   item.state = state;
 }
 
