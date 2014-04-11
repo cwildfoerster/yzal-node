@@ -75,6 +75,9 @@ form {
 	margin: 0 -100px;
 	text-transform: uppercase;
 	font-weight: 300;
+	line-height: 1;
+	margin-top: 5px;
+	letter-spacing: -0.03em;
 }
 
 #master-off {
@@ -89,6 +92,7 @@ form {
 
 #master-off strong {
 	margin: auto;
+	letter-spacing: 1px;
 }
 
 .btn-default {

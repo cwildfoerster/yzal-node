@@ -62,7 +62,10 @@
 
             // cancel long press event if the finger or mouse was moved
             function move_callback(e) {
-                clearTimeout(timeout);
+                // chrome fix
+                if (e.which == 0) {
+                    clearTimeout(timeout);
+                }
             }
 
             // Browser Support

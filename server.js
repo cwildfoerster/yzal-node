@@ -3,7 +3,7 @@ var app    = require('http').createServer(handler),
     fs     = require('fs'),
     path   = require('path'),
     url    = require('url'),
-    sh     = require('execSync'),
+//    sh     = require('execSync'),
     config = require('./config.json');
 
 // simple mimetypes...
@@ -100,9 +100,24 @@ function getItem(system, remote) {
   return null;
 }
 
+// http://stackoverflow.com/questions/610406/javascript-equivalent-to-printf-string-format/4673436#4673436
+// First, checks if it isn't implemented yet.
+if (!String.prototype.format) {
+  String.prototype.format = function() {
+    var args = arguments;
+    return this.replace(/{(\d+)}/g, function(match, number) { 
+      return typeof args[number] != 'undefined'
+        ? args[number]
+        : match
+      ;
+    });
+  };
+}
+
 // does the low level switching
 function switchInternal(item, state) {
-  sh.run(config.command + ' ' + item.system + ' ' + item.remote + ' ' + state);
+  //sh.run(config.command.format(item.system, item.remote, state));
+  console.log(config.command.format(item.system, item.remote, state));
   item.state = state;
 }
 
@@ -118,12 +133,15 @@ function saveConfig() {
     if (err) {
       console.log('Failed to save config.json: ' + err);
     }
-  }); 
+  });
 }
 
 io.sockets.on('connection', function(socket) {
   // update client upon connection
-  socket.emit('update', config.groups);
+  socket.emit('initial', {
+    "ui-settings" : config['ui-settings'],
+    "groups" : config.groups
+  });
 
   // register switch event
   socket.on('switch', function(data) {

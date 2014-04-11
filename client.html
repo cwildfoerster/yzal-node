@@ -6,19 +6,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<title>Yzal [wai-sal]</title>
 	<link href="//fonts.googleapis.com/css?family=Roboto:400,300,500" rel="stylesheet" type="text/css">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/yzal.min.css" rel="stylesheet">
 </head>
 <body>
-	<div class="container">
+	<div class="container fade">
 		<div class="row">
 			<div class="col-md-4"></div>
 			<div class="col-md-4"></div>
 			<div class="col-md-4"></div>
 		</div>
-		<div class="row">
+		<div id="masterout-container" class="row">
 			<div class="col-md-12 text-center">
-				<span id="master-off" class="switch btn btn-warning"><i class="glyphicon glyphicon-off"></i><strong>Master aus</strong></span>
+				<span id="master-off" class="switch btn btn-warning"><i class="glyphicon glyphicon-off"></i><strong class="label-master-out">label-master-out</strong></span>
 			</div>
 		</div>
 	</div>
@@ -28,12 +27,12 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					<h3 class="modal-title">Timer hinzufügen</h3>
+					<h3 class="title-add-timer modal-title">title-add-timer</h3>
 				</div>
 				<div class="modal-body">
 					<form class="form-horizontal" role="form">
 						<div class="form-group">
-							<label for="timer-time" class="col-sm-2 control-label">Uhrzeit in</label>
+							<label for="timer-time" class="label-time col-sm-2 control-label">label-time</label>
 							<div class="col-sm-10">
 								<input type="time" class="form-control" id="timer-time" name="timer-time" placeholder="01:00">
 							</div>
@@ -52,17 +51,17 @@
 							</div>
 						</div>-->
 						<div class="form-group">
-							<label for="timer-type" class="col-sm-2 control-label">Aktion</label>
+							<label for="timer-type" class="label-action col-sm-2 control-label">label-action</label>
 							<div class="col-sm-10">
 								<div class="btn-group timer-type" data-toggle="buttons">
 									<label class="btn btn-default active">
-										<input type="radio" name="timer-type" value="1"> Einschalten
+										<input type="radio" name="timer-type" value="1"> <span class="timer-type-1">timer-type-1</span>
 									</label>
 									<label class="btn btn-default">
-										<input type="radio" name="timer-type" value="0"> Ausschalten
+										<input type="radio" name="timer-type" value="0"> <span class="timer-type-2">timer-type-2</span>
 									</label>
 									<label class="btn btn-default">
-										<input type="radio" name="timer-type" value="2"> Umschalten
+										<input type="radio" name="timer-type" value="2"> <span class="timer-type-3">timer-type-3</span>
 									</label>
 								</div>
 							</div>
@@ -70,12 +69,29 @@
 					</form>
 				</div>
 				<div class="modal-footer">
-					<span class="btn btn-lg btn-default" data-dismiss="modal">Abbrechen</span>
-					<span class="btn btn-lg btn-primary">Speichern</span>
+					<span class="btn-cancel btn btn-lg btn-default" data-dismiss="modal">btn-cancel</span>
+					<span class="btn-save btn btn-lg btn-primary">btn-save</span>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<div id="are-you-sure-modal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h3 class="title-are-you-sure modal-title">title-are-you-sure</h3>
+				</div>
+				<div class="text-are-you-sure modal-body"></div>
+				<div class="modal-footer">
+					<span class="btn-cancel btn btn-lg btn-default" data-dismiss="modal">btn-cancel</span>
+					<span class="btn-okay btn btn-lg btn-primary">btn-okay</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.longpress.js"></script>
 	<script src="js/bootstrap.min.js"></script>

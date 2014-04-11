@@ -1,6 +1,23 @@
 {
-  "command": "./send",
+  "command": "./send {0} {1} {2}",
   "port": 8080,
+  "ui-settings": {
+    "enable-masterout": true,
+    "text": {
+      "title-add-timer": "Add Timer",
+      "title-are-you-sure": "Are you sure?",
+      "text-are-you-sure": "This will switch of all receivers...",
+      "label-time": "Time in",
+      "label-action": "Action",
+      "label-master-out": "Master Off",
+      "timer-type-1": "Switch On",
+      "timer-type-2": "Switch Off",
+      "timer-type-3": "Toggle",
+      "btn-save": "Save",
+      "btn-cancel": "Cancel",
+      "btn-okay": "Okay"
+    }
+  },
   "groups": [
     {
       "name": "Lights",
@@ -9,6 +26,12 @@
           "name": "Bright-Light",
           "system": "11111",
           "remote": 1,
+          "state": 0
+        },
+        {
+          "name": "LED-Strips",
+          "system": "11111",
+          "remote": 3,
           "state": 0
         },
         {
@@ -29,8 +52,43 @@
           "state": 0
         },
         {
+          "name": "Hispter-Retro-Radio",
+          "system": "11110",
+          "remote": 3,
+          "state": 0
+        },
+        {
           "name": "Steambox",
           "system": "11110",
+          "remote": 2,
+          "state": 0
+        }
+      ]
+    },
+    {
+      "name": "Home appliances",
+      "items": [
+        {
+          "name": "Fancy Espresso Machine",
+          "system": "11100",
+          "remote": 3,
+          "state": 1
+        },
+        {
+          "name": "Freezer",
+          "system": "11100",
+          "remote": 1,
+          "state": 0
+        },
+        {
+          "name": "Fridge",
+          "system": "11100",
+          "remote": 4,
+          "state": 0
+        },
+        {
+          "name": "Microwave",
+          "system": "11100",
           "remote": 2,
           "state": 0
         }
