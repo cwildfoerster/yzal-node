@@ -3,7 +3,7 @@ var app    = require('http').createServer(handler),
     fs     = require('fs'),
     path   = require('path'),
     url    = require('url'),
-//    sh     = require('execSync'),
+    sh     = require('execSync'),
     config = require('./config.json');
 
 // simple mimetypes...
