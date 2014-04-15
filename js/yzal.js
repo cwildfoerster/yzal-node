@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 		updateUi(socket, data.groups);
 
-		$('.container').addClass('in');
+		$('.container').show().addClass('in');
 	});
 
 	socket.on('update', function(data) {
