@@ -1,6 +1,7 @@
 {
   "command": "./send {0} {1} {2}",
   "port": 8080,
+  "timer-check-interval": 30,
   "ui-settings": {
     "enable-masterout": true,
     "text": {

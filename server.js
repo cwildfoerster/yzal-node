@@ -79,7 +79,7 @@ function checkTimer() {
     updateAllClients();
   }
 
-  setTimeout(checkTimer, 1000);
+  setTimeout(checkTimer, config['timer-check-interval'] * 1000);
 }
 
 // check forever...
