@@ -18,6 +18,28 @@ var mimeTypes = {
   'eot'  : 'application/vnd.ms-fontobject'
 };
 
+// http://stackoverflow.com/questions/610406/javascript-equivalent-to-printf-string-format/4673436#4673436
+// First, checks if it isn't implemented yet.
+if (!String.prototype.format) {
+  String.prototype.format = function() {
+    var args = arguments;
+    return this.replace(/{(\d+)}/g, function(match, number) { 
+      return typeof args[number] != 'undefined'
+        ? args[number]
+        : match
+      ;
+    });
+  };
+}
+// https://stackoverflow.com/questions/646628/how-to-check-if-a-string-startswith-another-string
+if (typeof String.prototype.startsWith != 'function') {
+  // see below for better implementation!
+  String.prototype.startsWith = function (str){
+    return this.indexOf(str) == 0;
+  };
+}
+
+
 // sort config..
 for (var i = 0; i < config.groups.length; i++) {
   config.groups[i].items.sort(function(a, b) { 
@@ -34,6 +56,15 @@ function handler(req, res) {
     uri = '/client.html';
   }
 
+  // check uri
+  if (!uri.startsWith('/css') && !uri.startsWith('/js') && !uri.startsWith('/fonts') && !uri.startsWith('/favicon.ico')  && !uri.startsWith('/client.html')) {
+    res.writeHead(403, { 'Content-Type': 'text/plain' });
+    res.write('403 Forbidden\n');
+    res.end();
+    return;
+  }
+
+  // TODO maybe check for directory traversals?
   var filename = path.join(process.cwd(), uri);
   
   fs.exists(filename, function(exists) {
@@ -98,20 +129,6 @@ function getItem(system, remote) {
 
   console.log('invalid item: ' + system + ',' + remote);
   return null;
-}
-
-// http://stackoverflow.com/questions/610406/javascript-equivalent-to-printf-string-format/4673436#4673436
-// First, checks if it isn't implemented yet.
-if (!String.prototype.format) {
-  String.prototype.format = function() {
-    var args = arguments;
-    return this.replace(/{(\d+)}/g, function(match, number) { 
-      return typeof args[number] != 'undefined'
-        ? args[number]
-        : match
-      ;
-    });
-  };
 }
 
 // does the low level switching
