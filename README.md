@@ -8,14 +8,12 @@ Yzal is a simple, yet fast and good looking web application designed to control 
 ### How to run
 * `$ cp config.sample.json config.json`
 * `$ npm install`
-* `$ node server.js`
+* `$ node server.js` or `$ forever start server.js`
 * Open [http://localhost:8080](http://localhost:8080)
 
 ### TODO
 * Documentation for what this project is, how to build and how to run.
-* Support i18n / l10n
 * Maybe add some kind of administration interface, so we do not need to modify the `config.json`
 * Proper build tools
 * Provide a "howto" how to make your Raspberry Pi capable of controlling cheap remote power outlets.
-* Add watch service to monitor changes to `config.json` to automatically reload it
 * What else?
