@@ -21,7 +21,8 @@
     "socket.io"
   ],
   "dependencies" : {
-    "socket.io": "~0.9.6",
+    "socket.io": "~1.0.1",
+    "socket.io-client": "~1.0.1",
     "execSync": "~1.0.0"
   },
   "license": "MIT",
